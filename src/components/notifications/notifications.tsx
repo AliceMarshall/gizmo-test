@@ -32,7 +32,6 @@ const NotificationsView = ({
         })
             .then((response) => response.json())
             .then((json) => {
-                console.log(json);
                 setNotifications(json);
                 setLoading(false);
             });
@@ -53,8 +52,9 @@ const NotificationsView = ({
     return (
         <Wrapper>
             <>
-                {notifications.map((notification) => (
+                {notifications.map((notification, i) => (
                     <NotificationCard
+                        key={`notification-card${i}`}
                         notification={notification}
                         username={username}
                     />

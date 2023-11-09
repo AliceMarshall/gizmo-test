@@ -1,21 +1,13 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.section`
-    padding: 4em;
-`;
-
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #bf4f74;
-`;
+const Profile = lazy(() => import("./views/profileView"));
 
 const App = () => {
     return (
-        <Wrapper>
-            <Title>Hello World</Title>
-        </Wrapper>
+        <Suspense fallback={<div className="app-loader"></div>}>
+            <Profile />
+        </Suspense>
     );
 };
 

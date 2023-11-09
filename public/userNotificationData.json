@@ -1,0 +1,14 @@
+[
+    {
+        "userId": "1",
+        "type": "streak",
+        "count": 5,
+        "timestamp": "2023-11-09T11:32:44Z"
+    },
+    {
+        "userId": "1",
+        "type": "new-cards",
+        "count": 2,
+        "timestamp": "2023-11-09T11:33:49Z"
+    }
+]
